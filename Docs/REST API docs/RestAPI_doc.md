@@ -1,0 +1,24 @@
+| Service name |
+|--------------|
+| Description |
+| Mehtod |
+| Path/path |
+| Reqest + params |
+| Response OK |
+| Response Error |
+| Example curl |
+
+### Rest API documentation
+
+The table above is a example of the structure of the documentation
+
+#### Global services
+| Login |
+|-|
+| Checks the given username, and password. In case of good username + pw pair, makes the user logged in. |
+| Method: POST |
+| /api/auth/login |
+| JSON to post: { "username": "string", "password": "string" } |
+| OK: { accessToken": "string", "refreshToken": "string, "role": "string"} |
+| In case of bad username or password -> Error: 401 |
+|  |
