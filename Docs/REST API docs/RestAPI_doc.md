@@ -21,4 +21,4 @@ The table above is a example of the structure of the documentation
 | JSON to post: { "username": "string", "password": "string" } |
 | OK: { accessToken": "string", "refreshToken": "string, "role": "string"} |
 | In case of bad username or password -> Error: 401 |
-|  |
+| curl -X POST "http://localhost:3245/api/auth/login" -H "accept: text/plain" -H "Content-type: application/json-patch+json" -d "{\"username\":\"actualUsername\", \"password\":\"actualPassword\"}" |
