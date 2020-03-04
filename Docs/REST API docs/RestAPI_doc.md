@@ -23,6 +23,17 @@ The table above is a example of the structure of the documentation
 | In case of bad username or password -> Error: 401 |
 | curl -X POST "http://localhost:3245/api/auth/login" -H "accept: text/plain" -H "Content-type: application/json-patch+json" -d "{\"username\":\"actualUsername\", \"password\":\"actualPassword\"}" |
 
+#### Admin services
+
+| Add user |
+|-|
+| Add a new user to the database |
+| Method: POST |
+| /api/users/adduser |
+| JSON to post: { "id":0, "username":"string", "password":"string", "email":"string", "firstName":"string", "lastName":"string", "role":"string" } |
+| OK: 200 status code |
+| Error: status code + message |
+| curl -X POST "http://localhost:3245/api/users/adduser" -H "Content-Type: application/json-patch+json" -d "{\"id\":0,\"username\":4,\"password\":\"string\",\"email\":\"string\",\"firstName\":0,\"lastName\":\"string\",\"role\":\"string\"}" |
 
 | Show User |
 | -|
