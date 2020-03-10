@@ -23,6 +23,17 @@ The table above is a example of the structure of the documentation
 | In case of bad username or password -> Error: 401 |
 | curl -X POST "http://localhost:3245/api/auth/login" -H "accept: text/plain" -H "Content-type: application/json-patch+json" -d "{\"username\":\"actualUsername\", \"password\":\"actualPassword\"}" |
 
+| Logout |
+| -|
+| Logout will stop the session |
+| Method: GET |
+| Path: Inventory/logout |
+| Parameters: Request Headers - user-token |
+| Response OK: Code: 200, Logout successful |
+| Response Error: 401, Invalid token
+| Curl -v "https://localhost/Inventory/logout -H user_token:[value_of_user_token_from_login] |
+
+
 #### Admin services
 
 | Add user |
@@ -43,6 +54,7 @@ The table above is a example of the structure of the documentation
 | URL Params, Required: `id=[integer]` |
 | Response OK: Code: 200, Content: `Content: {id: 1, name : "Valaki" }` |
 | Response Error: Code: 404 -->User doesn't exist |
+
 
  
 
