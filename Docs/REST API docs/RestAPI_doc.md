@@ -33,6 +33,16 @@ The table above is a example of the structure of the documentation
 | Response Error: 401, Invalid token
 | Curl -v "https://localhost/Inventory/logout -H user_token:[value_of_user_token_from_login] |
 
+| Register |
+| - |
+| User Register |
+| Method: PUT |
+| Path: Inventory/Register |
+| Parameters: "USER", "PASSWORD", "EMAIL", "FIRSTNAME", "LASTNAME" |
+| Response OK: 201, Register is successful |
+| Response Error: 400, Missing Parameters |
+
+
 
 #### Admin services
 
