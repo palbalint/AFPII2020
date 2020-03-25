@@ -1,0 +1,11 @@
+{
+  "name": "garagebackendapp",
+  "version": "1.0.0",
+  "description": "backend app for AFPII",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pál Bálint, Szondi Máté",
+  "license": "ISC"
+}
