@@ -66,6 +66,36 @@ The table above is a example of the structure of the documentation
 | Response Error: Code: 404 -->User doesn't exist |
 
 
- 
+ #### User services
+
+ | Make order |
+ |-|
+ | Creates a new order |
+ | Method: POST |
+ | /api/orders/makeorder |
+ | request must contain: id, email, orderData[] <- in JSON format |
+ | OK: 200 |
+ | Error: error code + message |
 
 
+ #### Build-in team services
+
+ | Check daily work |
+ |-|
+ | Returns json data about daily works |
+ | Method: GET |
+ | /api/works/dailyall |
+ | no json file or parameters needed |
+ | OK: 200 + { "addressOfWork":"String", "deadline": date, "idOfDoor": "String" } |
+ | Error: eroor code + message |
+
+#### Producer services
+
+| Logging the process |
+|-|
+| Creates new log about producing process |
+| Method: POST |
+| /api/process/addnewlog |
+| userId, text of log <- in json format |
+| OK: 200 |
+| Error: error code + message |
