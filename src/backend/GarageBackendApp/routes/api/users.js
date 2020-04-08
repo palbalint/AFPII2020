@@ -29,7 +29,8 @@ router.post("/register", (req, res) => {
     const newUser = new User({
         name: req.body.name,
         email: req.body.email,
-        password: req.body.password
+        password: req.body.password,
+        role: req.body.role
     });
 
     bcrypt.genSalt(10, (err, salt) =>{
@@ -73,6 +74,15 @@ router.post("/login", (req, res) => {
                 });
 
         });
+});
+
+router.get("/users", (req, res) => {
+    User.find({}, (err, users) => {
+        if(err){
+            res.send(err)
+        }
+        res.json(users);
+    });
 });
 
 module.exports = router;
