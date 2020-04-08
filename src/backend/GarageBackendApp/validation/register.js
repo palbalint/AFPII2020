@@ -41,8 +41,8 @@ module.exports = function validateRegisterInput(data){
     if(Validator.isEmpty(data.role)){
         errors.role = "Role field is required";
     }
-    else if(data.role !== "User" || data.role !== "Admin" ||
-            data.role !== "Producer" || data.role !== "Manager" || data.role !== "Expert"){
+    else if(data.role !== "User" && data.role !== "Admin" &&
+            data.role !== "Producer" && data.role !== "Manager" && data.role !== "Expert"){
                 errors.role = "Invalid role.";
             }
 
