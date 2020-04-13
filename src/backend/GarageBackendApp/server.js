@@ -5,6 +5,7 @@ const passport = require("passport")
 
 const app = express();
 const users = require("./routes/api/users");
+const doors = require("./routes/api/doors");
 
 app.use(
     bodyParser.urlencoded({
@@ -25,6 +26,7 @@ require("./config/passport")(passport);
 
 
 app.use("/api/users", users)
+app.use("/api/doors", doors)
 
 const port = 5000;
 app.listen(port, () => console.log("Server is running on port 5000"))
