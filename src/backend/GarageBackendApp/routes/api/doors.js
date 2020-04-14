@@ -13,7 +13,7 @@ router.post("/add", (req, res) => {
         currency: req.body.currency
     });
 
-    newDoor.save().then(res => res.json(door))
+    newDoor.save().then(() => res.json(newDoor))
         .catch(err => console.log(err));
 });
 
