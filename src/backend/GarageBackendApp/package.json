@@ -1,28 +1,26 @@
 {
-  "name": "garagebackend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Pál Bálint, Szondi Máté",
-  "license": "ISC",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.19.0",
-    "concurrently": "^5.1.0",
-    "express": "^4.17.1",
-    "is-boolean": "0.0.2",
-    "is-empty": "^1.2.0",
-    "is-number": "^7.0.0",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.7",
-    "passport": "^0.4.1",
-    "passport-jwt": "^4.0.0",
-    "validator": "^13.0.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.2"
+    "name": "garagebackend",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Pál Bálint, Szondi Máté",
+    "license": "ISC",
+    "dependencies": {
+      "bcryptjs": "^2.4.3",
+      "body-parser": "^1.19.0",
+      "concurrently": "^5.1.0",
+      "express": "^4.17.1",
+      "is-empty": "^1.2.0",
+      "jsonwebtoken": "^8.5.1",
+      "mongoose": "^5.9.7",
+      "passport": "^0.4.1",
+      "passport-jwt": "^4.0.0",
+      "validator": "^13.0.0"
+    },
+    "devDependencies": {
+      "nodemon": "^2.0.2"
+    }
   }
-}

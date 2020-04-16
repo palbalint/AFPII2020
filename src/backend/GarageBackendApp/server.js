@@ -5,8 +5,6 @@ const passport = require("passport")
 
 const app = express();
 const users = require("./routes/api/users");
-const doors = require("./routes/api/doors");
-const bids = require("./routes/api/bids");
 
 app.use(
     bodyParser.urlencoded({
@@ -18,7 +16,7 @@ app.use(bodyParser.json())
 
 const dbKeys = require("./config/keys").mongoURI
 
-mongoose.connect(dbKeys, {useNewUrlParser: true, useFindAndModify: false} )
+mongoose.connect(dbKeys, {useNewUrlParser: true}    )
     .then(() => console.log("Database connected successfully"))
     .catch(err => console.log(err))
 
@@ -26,10 +24,7 @@ app.use(passport.initialize());
 require("./config/passport")(passport);
 
 
-app.use("/api/users", users);
-app.use("/api/doors", doors);
-app.use("/api/bids", bids);
-
+app.use("/api/users", users)
 
 const port = 5000;
 app.listen(port, () => console.log("Server is running on port 5000"))

@@ -8,7 +8,7 @@ module.exports = function validateLoginInput(data){
     data.password = !isEmpty(data.password) ? data.password: "";
     //email validáció
     if(Validator.isEmpty(data.email)){
-        errors.email = "Email field is reqired";
+        errors = "Email field is reqired";
     }
     else if(!Validator.isEmail(data.email)){
         errors.email = "Email is invalid";
