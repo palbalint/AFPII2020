@@ -2,8 +2,12 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport")
+const Cors = require("cors")
+const swaggerUi = require("swagger-ui-express")
+const swaggerJSDoc = require("swagger-jsdoc")
 
 const app = express();
+
 const users = require("./routes/api/users");
 const doors = require("./routes/api/doors");
 const bids = require("./routes/api/bids");
