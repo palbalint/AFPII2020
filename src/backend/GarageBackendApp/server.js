@@ -11,7 +11,11 @@ const app = express();
 const users = require("./routes/api/users");
 const doors = require("./routes/api/doors");
 const bids = require("./routes/api/bids");
+
+const shipping = require("./routes/api/shippings");
+
 const orders = require("./routes/api/orders");
+
 
 app.use(
     bodyParser.urlencoded({
@@ -34,7 +38,11 @@ require("./config/passport")(passport);
 app.use("/api/users", users);
 app.use("/api/doors", doors);
 app.use("/api/bids", bids);
+
+app.use("/api/shipping", shipping);
+
 app.use("/api/orders", orders);
+
 
 
 const port = 5000;
