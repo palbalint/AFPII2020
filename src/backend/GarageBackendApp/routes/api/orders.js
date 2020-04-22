@@ -29,7 +29,8 @@ router.post("/add", (req, res) => {
         address: req.body.address,
         items: req.body.items,
         price: calculatePrice(req.body.items),
-        currency: req.body.currency
+        currency: req.body.currency,
+        deliveryStatus: req.body.status
     });
 
     newOrder.save().then(() => res.json(newOrder))
@@ -59,7 +60,8 @@ router.put("/modify/:id", (req, res) => {
         address: req.body.address,
         items: req.body.items,
         price: calculatePrice(req.body.items),
-        currency: req.body.currency
+        currency: req.body.currency,
+        deliveryStatus: req.body.status
     }).then(() => res.json(res.body))
         .catch(err => res.status(400).json('Error ' + err))
 })

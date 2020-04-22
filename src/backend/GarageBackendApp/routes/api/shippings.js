@@ -34,6 +34,25 @@ router.post("/add", (req, res) => {
 
     newShipping.save().then(() => res.json(newShipping))
         .catch(err => console.log(err));
+});
+//Returns all shipping objects
+router.get('/', (req, res) => {
+    Shipping.find()
+        .then(shipping => res.json(shipping))
+        .catch(err => res.status(400).json('Error ' + err))
+});
+//Deletes a shipping by id
+router.delete('/:id', (req,res) => {
+    Shipping.findByIdAndDelete(req.params.id)
+        .then(() => res.send('Successful deletion'))
+        .catch(err => res.status(400).json('Error ' + err))
+});
+//Modifies a Shipping's address
+router.put('/modify/:id', (req, res) => {
+    Shipping.findByIdAndUpdate({_id: req.params.id}, {
+        address: req.body.address
+    }).then(() => res.send('Successful modification'))
+        .catch(err => res.status(400).json('Eroor ' + err))
 })
 
 

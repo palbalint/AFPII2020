@@ -9,7 +9,8 @@ const OrderSchema = new Schema({
     items: {type: Array, required: true}, //contains door objects
     price: {type: Number, required: true},
     currency: {type: String, required: true},
-    orderDate: {type: Date, default: Date.now}
+    deliveryStatus: {type: String, required: true},//e.g.:order accepted, delivery started, delivered, built in...
+    orderDate: {type: Date, default: Date.now},
 });
 
 module.exports = Order = mongoose.model("orders", OrderSchema);
