@@ -16,6 +16,7 @@ const shipping = require("./routes/api/shippings");
 
 const orders = require("./routes/api/orders");
 
+const checkings = require("./routes/api/checkings");
 
 app.use(
     bodyParser.urlencoded({
@@ -43,6 +44,7 @@ app.use("/api/shipping", shipping);
 
 app.use("/api/orders", orders);
 
+app.use("/api/checkings", checkings);
 
 
 const port = 5000;
