@@ -5,6 +5,7 @@ const passport = require("passport")
 const Cors = require("cors")
 const swaggerUi = require("swagger-ui-express")
 const swaggerJSDoc = require("swagger-jsdoc")
+var cors = require('cors')
 
 const app = express();
 
@@ -21,6 +22,7 @@ const checkings = require("./routes/api/checkings")
 const installJobs = require("./routes/api/installJobs");
 
 
+app.use(cors());
 app.use(
     bodyParser.urlencoded({
         extended: false
