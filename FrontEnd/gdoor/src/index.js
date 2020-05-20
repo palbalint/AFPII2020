@@ -39,6 +39,7 @@ ReactDOM.render(
                     path="/register"
                     render={props => <Register {...props} />}
                 />
+                
 
                 <PrivateRoute exact path="/doors-list" component={DoorsList} />
 
